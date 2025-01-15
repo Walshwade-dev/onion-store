@@ -16,9 +16,9 @@
             <div class="img-container">
             <img src="${product.imageUrl}" alt="${product.name}">
             </div>
-            <h4>${product.category}</h4>
-            <p>From: ${product.origin}</p>
-            <p>Price: ${product.price}</p>
+            <span class="product-card-label">${product.category}</span>
+            <p>Origin: ${product.origin}</p>
+            <p>Retailing at: ${product.price}</p>
             <a href="#webapp" class="btn">View in Catalogue</a>
         </div>
         `;

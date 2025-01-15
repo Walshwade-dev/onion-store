@@ -57,11 +57,14 @@
   /* Mobile-first: Hero Section */
   .hero {
     position: relative;
-    height: 40vh;
+    height: 50vh;
     background-image: url('./assets/hero-img.png');
     background-repeat: no-repeat;
     background-position: center;
-    padding: 2rem;
+    display: flex;;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 0 0 2rem 1em;
     color: white;
   }
 
@@ -71,7 +74,7 @@
     top: 0;
     left: 0;
     width: 100vw;
-    height: 40vh;
+    height: 50vh;
     background: rgba(36, 0, 0, 0.349); /* Semi-transparent black layer */
     z-index: 1; /* Ensures the overlay stays above the background but below the text */
   }
@@ -107,52 +110,89 @@
   .hero .btn:hover, .hero .btn:focus {
     background: #8d3902;
   }
+
+
+  /* welcome section */
+  .welcome {
+    height: 30vh;
+  }
+
+  .welcome h2 {
+    padding: 0.5em 0;
+  }
+
+  .welcome p {
+    line-height: 1.5;
+    letter-spacing: 0.1em;
+  }
   
   /* Mobile-first: Product Section */
   .products {
-    padding: 1rem;
+    
+    width: 90vw;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
   }
   
   .products h2 {
     text-align: center;
     color: #ff6600;
-    margin-bottom: 1rem;
+    border-top:5px solid #ff6600;
+    margin: 0 auto;
   }
   
   .product-category h3 {
     text-align: center;
-    margin-bottom: 0.5rem;
+    margin-bottom: 1rem;
   }
   
   .product-grid {
     display: grid;
     grid-template-columns: 1fr; /* Single column for mobile */
     gap: 1rem;
+    margin-bottom: 2rem
   }
   
   .product-card {
     background-color: gainsboro;
-    border-radius: 8px;
+    position: relative;
+    width: 90%;
+    min-height: 25rem;
+    margin: 0 auto;
+    border-radius: 1rem;
     overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    height: 25rem; /* Set a fixed height for the card */
-    padding: 0 0 0.5em 0;
+  }
+
+  .product-card-label {
+    position: absolute;
+    top: 1%;
+    left: 1%;
+    font-weight: 700;
+    color: #ff6600;
+    background-color: whitesmoke;
+    padding: 0.25em 0.5em;
+    border-radius: 0.5em;
   }
   
   .img-container {
-    height: 30vh; /* Make the image container 50% of the card height */
+    max-height: 18rem;
+    margin-bottom: 0.5rem;
     overflow: hidden;
+    border-bottom-right-radius: 1em;
+    border-bottom-left-radius: 1em;
   }
   
   .img-container img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* This ensures the image fills the container while maintaining aspect ratio */
+    object-fit: cover;
+    object-position: calc(50%) calc(50% - 120px);
   }
   
-  .product-card h4, .product-card p {
-    margin: 0.1rem 1rem;
+  .product-card h4, .product-card p, .product-card .btn {
+    margin: 0 1rem;
   }
   
   .product-card .btn {
@@ -160,9 +200,13 @@
     background-color: #ff6600;
     color: white;
     padding: 0.5rem 1rem;
-    margin: 0 0.5rem;
     text-align: center;
     border-radius: 4px;
+  }
+
+
+  .buy-from-us {
+    margin-bottom: 2rem;
   }
 
   .buying-images-grid {
@@ -202,6 +246,31 @@
     border-radius: 8px;
   }
 
+  .feedback {
+    background-color: red;
+    display: grid;
+    grid-template-columns: 1em 1fr 1em;
+    grid-template-rows: auto;
+    row-gap: 1m;
+    grid-template-areas: 
+        ".... .... .... ."
+        ".... img1 ...."
+        ".... card1 ...."
+        ".... img2 ...."
+        ".... card2 ...."
+        ".... .... .... ."
+    ;
+  }
+
+  .feedback h2 {
+    color: #ff6600;
+    text-align: center
+  }
+
+  .feedback-grid {
+    width: 100%;
+    background-color: yellowgreen
+  }
 
   .contact-img {
     height: 200px;
@@ -217,7 +286,7 @@
     border-radius: 0.5rem;
   }
   
-  .feedback-grid {
+  /* .feedback-grid {
     display: grid;
     grid-template-areas: 
         ".... .... .... ....."
@@ -226,7 +295,7 @@
         ".... .... .... ....."
     ;
     gap: 20px;
-  }
+  } */
 
   .image-1 {
     grid-area: img1;
