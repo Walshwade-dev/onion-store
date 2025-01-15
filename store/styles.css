@@ -1,0 +1,331 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+  }
+
+  .container {
+    width: 90vw;
+    margin: 0 auto;
+  }
+  
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  /* Mobile-first: Header */
+  header {
+    background: #333;
+    color: #fff;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  header .logo {
+    display: flex;
+    align-items: center;
+  }
+  
+  header .logo img {
+    width: 50px;
+  }
+  
+  header nav ul {
+    list-style: none;
+    display: none; /* Hidden by default for mobile */
+    flex-direction: column;
+  }
+  
+  header #menu-icon {
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+  
+  header nav.active ul {
+    display: flex;
+  }
+  
+  /* Mobile-first: Hero Section */
+  .hero {
+    height: 40vh;
+    background-image: url('./assets/hero-img.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 2rem;
+    color: white;
+  }
+
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: 8%;
+    left: 0;
+    width: 100vw;
+    height: 40vh;
+    background: rgba(36, 0, 0, 0.349); /* Semi-transparent black layer */
+    z-index: 1; /* Ensures the overlay stays above the background but below the text */
+  }
+  
+  .hero .hero-content {
+    position: relative; /* Ensure the text stays above the overlay */
+    z-index: 2;
+  }
+
+  .hero-content h1, .hero-content p {
+    text-shadow: 2px 2px 8px  black;
+  }
+  
+  .hero h1 {
+    font-size: 1.8rem;
+    width: 80vw;
+  }
+
+  .hero-content p {
+    font-weight: 500;
+  }
+  
+  .hero .btn {
+    display: inline-block;
+    background: #ff6600;
+    color: white;
+    padding: 0.5rem 1rem;
+    margin-top: 1rem;
+    font-weight: 400;
+    letter-spacing: 0.1em;
+  }
+
+  .hero .btn:hover, .hero .btn:focus {
+    background: #8d3902;
+  }
+  
+  /* Mobile-first: Product Section */
+  .products {
+    padding: 1rem;
+  }
+  
+  .products h2 {
+    text-align: center;
+    color: #ff6600;
+    margin-bottom: 1rem;
+  }
+  
+  .product-category h3 {
+    text-align: center;
+    margin-bottom: 0.5rem;
+  }
+  
+  .product-grid {
+    display: grid;
+    grid-template-columns: 1fr; /* Single column for mobile */
+    gap: 1rem;
+  }
+  
+  .product-card {
+    background-color: gainsboro;
+    border-radius: 8px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    height: 25rem; /* Set a fixed height for the card */
+    padding: 0 0 0.5em 0;
+  }
+  
+  .img-container {
+    height: 30vh; /* Make the image container 50% of the card height */
+    overflow: hidden;
+  }
+  
+  .img-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* This ensures the image fills the container while maintaining aspect ratio */
+  }
+  
+  .product-card h4, .product-card p {
+    margin: 0.1rem 1rem;
+  }
+  
+  .product-card .btn {
+    display: inline-block;
+    background-color: #ff6600;
+    color: white;
+    padding: 0.5rem 1rem;
+    margin: 0 0.5rem;
+    text-align: center;
+    border-radius: 4px;
+  }
+
+  .buying-images-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(80px, 1fr)); /* 2 images per row */
+    gap: 0.5em;
+    grid-auto-rows: 100px;
+    grid-auto-flow: dense;
+  }
+
+  .tall {
+    grid-row: span 2;
+  }
+
+  .big {
+    grid-column: span 2;
+    grid-row: span 2;
+  }
+
+  .wide {
+    grid-column: span 2;
+  }
+
+  .card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2em;
+    color: #ffeead;
+}
+  
+  .buying-images-grid img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 3px;
+    border-radius: 8px;
+  }
+
+
+  .contact-img {
+    height: 200px;
+    width: 150px;
+    overflow: hidden;
+    border-radius: 0.5rem;
+  }
+
+  .contact-img img {
+    width: 100%;
+    object-position: center;
+    object-fit: contain;
+    border-radius: 0.5rem;
+  }
+  
+  .feedback-grid {
+    display: grid;
+    grid-template-areas: 
+        ".... .... .... ....."
+        ".... img1 card1 ...."
+        ".... card2 img2 ...."
+        ".... .... .... ....."
+    ;
+    gap: 20px;
+  }
+
+  .image-1 {
+    grid-area: img1;
+  }
+
+  .image-2 {
+    grid-area: img2;
+  }
+
+  .card-1 {
+    grid-area: card1;
+  }
+
+  .card-2 {
+    grid-area: card2;
+  }
+  
+  .feedback-card {
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  
+  
+  /* Mobile-first: Contact Section */
+  .contact {
+    padding: 1rem;
+    text-align: center;
+  }
+  
+  #map iframe {
+    width: 100%;
+    height: 200px;
+    border: none;
+  }
+  
+  /* Mobile-first: Footer */
+  footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+  }
+  
+  footer ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+  }
+  
+  footer ul li a {
+    color: white;
+  }
+  
+
+  /* Tablet and Desktop Styles */
+@media (min-width: 768px) {
+
+    /* Header */
+    header nav ul {
+      display: flex; /* Show the menu by default on larger screens */
+      flex-direction: row;
+      gap: 1.5rem;
+    }
+    
+    #menu-icon {
+      display: none; /* Hide the burger icon on larger screens */
+    }
+  
+    /* Hero Section */
+    .hero {
+      height: 500px;
+    }
+  
+    .hero h2 {
+      font-size: 2.5rem;
+    }
+  
+    /* Products Section */
+    .product-grid {
+      grid-template-columns: repeat(2, 1fr); /* Two columns for tablets and up */
+    }
+  }
+  
+  @media (min-width: 1024px) {
+  
+    /* Products Section */
+    .product-grid {
+      grid-template-columns: repeat(3, 1fr); /* Three columns for desktops */
+    }
+    
+    .product-card {
+      padding: 1.5rem;
+    }
+  
+    /* Footer */
+    footer ul {
+      gap: 2rem;
+    }
+  }
+  
