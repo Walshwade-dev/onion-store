@@ -3,22 +3,57 @@
 
     const barsMenu = document.querySelector('.menu-bars-container');
 
-    barsMenu.addEventListener('click', () => {
-        let barsOpen = document.querySelector('.bars-open');
-        let barsClosed = document.querySelector('.bars-closed');
+    // Function to toggle menu visibility and hamburger icon state
+    // Function to toggle menu visibility and hamburger icon state
+function toggleMenu() {
+    let barsOpen = document.querySelector('.bars-open');
+    let barsClosed = document.querySelector('.bars-closed');
+    let menuEl = document.querySelector('.menu-list');
 
-        barsOpen.classList.toggle('hidden');
-        barsClosed.classList.toggle('hidden');
+    // Toggle visibility of menu and icons
+    barsOpen.classList.toggle('hidden');
+    barsClosed.classList.toggle('hidden');
+    menuEl.style.display = barsClosed.classList.contains('hidden') ? 'none' : 'block';
+    menuEl.classList.toggle('show');
+}
 
-        let menuEl = document.querySelector('.menu-list');
+// Function to close the menu and reset hamburger icons
+function closeMenu() {
+    let menuEl = document.querySelector('.menu-list');
+    let barsOpen = document.querySelector('.bars-open');
+    let barsClosed = document.querySelector('.bars-closed');
 
+    if (menuEl.style.display === 'block') {
+        menuEl.style.display = 'none';
+        menuEl.classList.remove('show');
         if (!barsClosed.classList.contains('hidden')) {
-            menuEl.style.display = 'block';
-        } else {
-            menuEl.style.display = 'none';
+            barsOpen.classList.remove('hidden');
+            barsClosed.classList.add('hidden');
+        }
+    }
+    }
+
+    // Event listener for the hamburger icon
+    barsMenu.addEventListener('click', (e) => {
+        e.stopPropagation(); // Prevent immediate closure when clicking the menu
+        toggleMenu();
+    });
+
+    // Close menu and reset icons if clicking outside the menu or navigating
+    document.addEventListener('click', (e) => {
+        if (!e.target.closest('.menu-list') && !e.target.closest('.bars-menu')) {
+            closeMenu();
         }
     });
-  
+
+    // Close the menu on navigation (link clicks)
+    document.querySelectorAll('nav a').forEach(link => {
+        link.addEventListener('click', closeMenu);
+    });
+
+    // Close the menu on page scroll
+    window.addEventListener('scroll', closeMenu);
+
 
     const productContainer = document.querySelector('.product-grid'); // Assuming the cards are inside a container with class .product-grid
 
