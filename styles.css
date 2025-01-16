@@ -57,6 +57,7 @@
   .menu-list {
     display: none;
     position: absolute;
+    width: 8rem;
     background-color: #3b1402e8;
     color: #ff6600;
     font-weight: 600;
@@ -64,7 +65,7 @@
     border-top-left-radius: 0.2em;
     border-bottom-left-radius: 0.2em;
     z-index: 4;
-    right: 0.9em;
+    right: -0.5em;
     top: 4.65em;
 }
 
