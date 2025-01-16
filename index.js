@@ -1,10 +1,23 @@
 // script.js
     import products from "./data.js";
 
-    document.getElementById('menu-icon').addEventListener('click', function() {
-        document.querySelector('nav').classList.toggle('active');
-    });
+    const barsMenu = document.querySelector('.menu-bars-container');
 
+    barsMenu.addEventListener('click', () => {
+        let barsOpen = document.querySelector('.bars-open');
+        let barsClosed = document.querySelector('.bars-closed');
+
+        barsOpen.classList.toggle('hidden');
+        barsClosed.classList.toggle('hidden');
+
+        let menuEl = document.querySelector('.menu-list');
+
+        if (!barsClosed.classList.contains('hidden')) {
+            menuEl.style.display = 'block';
+        } else {
+            menuEl.style.display = 'none';
+        }
+    });
   
 
     const productContainer = document.querySelector('.product-grid'); // Assuming the cards are inside a container with class .product-grid
