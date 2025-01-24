@@ -293,6 +293,10 @@
     border-radius: 8px;
   }
 
+  .feedback-container {
+    margin: 0 1em;
+  }
+
   .feedback h2 {
     color: #ff6600;
     text-align: center
