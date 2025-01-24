@@ -23,8 +23,8 @@
   /* Mobile-first: Header */
   header {
     position: relative;
-    background: #333;
-    color: #fff;
+    background: #FA812F;
+    color: #FEF3E2;
     padding: 1em 1.5em;
     display: flex;
     justify-content: space-between;
@@ -37,7 +37,7 @@
   }
   
   header .logo img {
-    width: 50px;
+    width: 70px;
   }
   
   nav ul {
@@ -166,8 +166,8 @@
   
   .products h2 {
     text-align: center;
-    color: #ff6600;
-    border-top:5px solid #ff6600;
+    color: #FA4032;
+    border-top:5px solid #FA4032;
     margin: 0 auto;
   }
   
@@ -256,6 +256,16 @@
     margin-bottom: 2rem;
   }
 
+  .buy-from-us h2 {
+    color: #FA4032;
+    font-size: 1.4rem;
+  }
+
+  .buy-from-us p {
+    padding: 1rem 0;
+    line-height: 1.5;
+  }
+
   .buying-images-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(80px, 1fr)); /* 2 images per row */
@@ -297,8 +307,9 @@
     margin: 0 1em;
   }
 
-  .feedback h2 {
-    color: #ff6600;
+  .feedback-container h2 {
+    color: #FA4032;
+    font-size: 1.5em;
     text-align: center
   }
 
@@ -369,7 +380,7 @@
   }
 
   .contact h2 {
-    color: #ff6600;
+    color: #FA4032;
   }
 
   .contact-info {
@@ -384,8 +395,8 @@
   
   /* Mobile-first: Footer */
   footer {
-    background: #333;
-    color: white;
+    background: #FA812F;
+    color: #FEF3E2;
     text-align: center;
     padding: 1rem;
   }
