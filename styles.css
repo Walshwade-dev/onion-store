@@ -230,6 +230,44 @@
     align-items: center;
   }
 
+    /* Star container styling */
+  .star-container {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.4em; /* Adjust star size */
+    line-height: 1;
+    width: 5rem; /* Ensure there's enough space for the stars */
+  }
+
+  /* Base for unshaded stars */
+  .star-container .star {
+    color: #ccc; /* Light grey for unfilled stars */
+    display: inline-block;
+    white-space: nowrap;
+  }
+
+  /* Mask for the shaded part of the stars */
+  .star-container::before {
+    content: "★★★★★"; /* Show 5 stars */
+    color: #FA4032; /* Color for filled stars */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: var(--rating); /* Use the percentage directly */
+    overflow: hidden;
+    white-space: nowrap;
+    transition: width 0.3s;
+  }
+
+  /* Example hover effect */
+  .star-container:hover::before {
+    width: 100%;
+  }
+
+
+
   .rate-card {
     display: flex;
     color: #ff6600;
