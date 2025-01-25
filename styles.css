@@ -505,56 +505,182 @@
   
 
   /* Tablet and Desktop Styles */
-@media (min-width: 768px) {
+  @media (min-width: 620px){
+    .container {
+      width: 90vw;
+      padding: 2rem 1rem;
+    }
 
-    /* Header */
-    header nav ul {
-      display: flex; /* Show the menu by default on larger screens */
-      flex-direction: row;
-      gap: 1.5rem;
+    .menu-bars-container, .menu-list{
+      display: none;
     }
     
-    #menu-icon {
-      display: none; /* Hide the burger icon on larger screens */
+    .full-menu {
+      width: 50vw;
+      display: flex;
+      font-size: 1.5em;
+      font-weight: 800;
+      justify-content: space-between;
     }
-  
-    /* Hero Section */
+
+    .full-menu li:hover, .full-menu list-style:focus {
+      text-decoration: underline;
+    }
+
     .hero {
-      height: 500px;
+      justify-content: center;
     }
-  
-    .hero h2 {
+
+    .hero-content {
+      width: 60vw;
+      height: 30vh;
+      line-height: 2;
+    }
+
+    .hero-content h1 {
+      width: 90vw;
       font-size: 2.5rem;
     }
-  
-    /* Products Section */
-    .product-grid {
-      grid-template-columns: repeat(2, 1fr); /* Two columns for tablets and up */
+
+    .hero-content p {
+      font-size: 1.9rem;
     }
-  }
-  
-  @media (min-width: 1024px) {
-  
-    /* Products Section */
+
+    .hero-content a {
+      font-size: 1.7rem;
+    }
+
+    .welcome {
+      height: 50%;
+    }
+    .welcome h2 {
+      font-size: 2rem;
+    }
+
+    .welcome p {
+      max-width: 80vw;
+      line-height: 2.1;
+      font-size: 1.4em;
+    }
+
+    .products {
+      background-color: inherit;
+    }
+
+    .products h2 {
+      font-size: 2.5rem;
+    }
+
+    .products h3 {
+      font-size: 1.7rem;
+    }
+
     .product-grid {
-      grid-template-columns: repeat(3, 1fr); /* Three columns for desktops */
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .product-card {
+      max-width: 17em;
+      font-size: 1.5em;
+    }
+
+    .buy-from-us {
+      background-color: inherit;
+    }
+
+    .buy-from-us h2 {
+      font-size: 1.9em;
+    }
+
+    .buy-from-us p {
+      font-size: 1.5em;
+      width: 70vw;
+      line-height: 2.4;
+    }
+
+    article + .hidden {
+      display: inline;
+    }
+
+    .buying-images-grid {
+      grid-template-columns: repeat(6, 1fr);
+      grid-template-areas: 
+      "muaa muaa Ndar Ndar load load"
+      "muaa muaa hadi hadi load load"
+      "kilo kilo hadi hadi ugnd ugnd"
+      "kilo kilo hadi hadi ugnd ugnd"
+      "drip drip stac stac bunc bunc"
+      "drip drip stac stac bunc bunc"
+    ;
+    }
+
+    .mua {
+      grid-area: muaa;
+    }
+
+    .bunch {
+      grid-area: bunc;
+    }
+
+    .feedback-container h2 {
+      font-size: 2em;
+      margin-bottom: 4rem;
+    }
+
+    .feedback-grid {
+      background-color: inherit;
+      width: 90vw;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 2fr));
+      margin: 0 auto;
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-areas: 
+      "img1 img1 card1 card1"
+      "img1 img1 card1 card1"
+      "img1 img1 card1 card1"
+      "card2 card2 img2 img2"
+      "card2 card2 img2 img2"
+      "card2 card2 img2 img2"
+      ;
+    }
+
+    .contact-img {
+      height: 25rem;
+    }
+
+    .contact-img img{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      border-radius: 0.5rem; 
     }
     
-    .product-card {
-      padding: 1.5rem;
+    .feedback-card p {
+      font-size: 1.7em
     }
-  
-    /* Footer */
-    footer ul {
-      gap: 2rem;
+
+    .card-1, .card-2{
+      width: 100%;
+      height: 100%;
+      padding: 1em 2em;
+    }
+
+    .contact h2 {
+      font-size: 2em;
+    }
+
+    .contact-info p {
+      font-size: 1.5rem;
+    }
+
+    .map{
+      height: 15rem;
+      width: 90vw;
+      margin: 0 auto;
+    }
+
+    footer {
+      font-size: 1.5rem;
     }
   }
-
-
-  @media (min-width: 900px) {
-    .feedback-grid {
-      grid-template-columns: repeat(2, 1fr); /* 2 columns on larger screens */
-    }
-  }
-  
   
