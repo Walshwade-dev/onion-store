@@ -391,33 +391,35 @@
   }
 
   .feedback-grid {
+    background-color: inherit;
     width: 100%;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
     grid-auto-flow: dense;
     grid-template-rows: auto;
     gap: 0.8em;
-    padding: 0 2em;
     grid-template-areas: 
-        ".... ...."
         "img1 card1"
         "img1 card1"
         "card2 img2"
         "card2 img2"
-        ".... .... "
+      ;
+    overflow: hidden;
+    padding: 0.9rem 0.5rem;
   }
 
   .contact-img img{
-    width: 150px;
-    height: 250px;
+    width: 140px;
+    height: 240px;
     object-fit: cover;
     border-radius: 0.5rem; 
   }
   
   .card-1, .card-2{
-    width: 150px;
-    height: 250px;
-    padding: 0.5em 0.2em;
+    width: 140px;
+    height: 240px;
+    padding: 0.5rem 0.3rem;
+    font-size: 0.9rem;
   }
 
   .feedbacker {
