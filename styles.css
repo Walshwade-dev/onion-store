@@ -312,7 +312,20 @@
     grid-auto-flow: dense;
   }
 
-  .tall {
+  .buying-images-grid {
+    display: grid;
+    grid-template-columns:repeat(4, 1fr);
+    grid-template-areas: 
+      "load load Ndar Ndar"
+      "load load hadi hadi"
+      "drip drip hadi hadi"
+      "drip drip ugnd ugnd"
+      "kilo kilo stac stac"
+      "kilo kilo stac stac"
+    ;
+  }
+
+  /* .tall {
     grid-row: span 2;
   }
 
@@ -323,7 +336,53 @@
 
   .wide {
     grid-column: span 2;
+  } */
+
+
+  /*
+    "bunc bunc muaa muaa"
+    "bunc bunc muaa muaa"
+    "bunc bunc ugnd ugnd"
+  */
+
+  /* ==== grid template areas */
+  .loading {
+    grid-area: load;
   }
+
+  .drip {
+    grid-area: drip;
+  }
+
+  .Ndare {
+    grid-area: Ndar;
+  }
+
+  .stacks {
+    grid-area: stac;
+
+  }
+
+  .hand {
+    grid-area: hadi;
+
+  }
+
+  .ugnd {
+    grid-area: ugnd;
+  }
+
+  .kilo {
+    grid-area: kilo;
+
+  }
+  /* ==== grid template areas */
+
+  article + .hidden {
+    display: none;
+  }
+
+
 
   .card {
     display: flex;
