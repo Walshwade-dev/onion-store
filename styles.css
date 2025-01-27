@@ -37,7 +37,13 @@
   }
   
   header .logo img {
+    margin-left: -1em;
     width: 70px;
+  }
+
+  .logo-title > p {
+    font-size: 0.789rem;
+    margin: -0.8em 0.1em 0;
   }
   
   nav ul {
@@ -142,7 +148,7 @@
 
   /* welcome section */
   .welcome {
-    height: 30vh;
+    height: 40vh;
   }
 
   .welcome h2 {
