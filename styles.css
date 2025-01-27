@@ -39,6 +39,11 @@
   header .logo img {
     width: 70px;
   }
+
+  .logo-title > p {
+    font-size: 0.789rem;
+    margin: -0.8em 0.1em 0;
+  }
   
   nav ul {
     list-style: none;
