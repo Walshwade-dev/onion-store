@@ -146,6 +146,59 @@
   }
 
 
+  /* onion list type section */
+
+  @font-face {
+    font-family:'grand';
+    src: url('./');
+  }
+
+  .onion-types-banner {
+    background-color: goldenrod;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    height: 5rem;
+    margin: 0 auto -2.5rem;
+  }
+  
+  .onion-banner-container 
+  { 
+    background-color: inherit;
+    width: 100%;
+    font-size: 1.5em;
+    font-weight: 700;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+  
+  .onion-list {
+    list-style: none; /* Remove bullet points */
+    padding: 0;
+    margin: 0;
+    display: inline-block; /* Important for horizontal scrolling */
+    animation: scroll 40s linear infinite; /* Adjust duration as needed */
+  }
+  
+  .onion-list li {
+    display: inline-block; /* Make list items appear side by side */
+    margin-right: 20px; /* Add spacing between items */
+  }
+  
+  @keyframes scroll {
+    0% { transform: translateX(0%); } /* Start off-screen to the right */
+    100% { transform: translateX(-50%); } /* Move completely off-screen to the left */
+  }
+  
+  /* Optional: Pause on hover */
+  .onion-banner-container:hover .onion-list {
+    animation-play-state: paused;
+  }
+  
+  /* onion list type section */
+
+
   /* welcome section */
   .welcome {
     height: 40vh;
