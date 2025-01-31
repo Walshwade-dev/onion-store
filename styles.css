@@ -4,6 +4,11 @@
     padding: 0;
     box-sizing: border-box;
   }
+
+  :root {
+    --margin-line: #941c5a;
+    --lines:#1d97b8;
+  }
   
   body {
     font-family: Arial, sans-serif;
@@ -215,11 +220,34 @@
     font-style: normal;
     font-display: swap;
   }
+
+  .onion-types-banner {
+    color: #ff6600;
+    height: 100%;
+    display: flex;
+    width: 90%;
+    height: 4rem;
+    margin: 1em auto;
+  }
+  
+  .onion-banner-container {
+    background-color: #fff;
+    margin: -1.5rem auto 0;
+    height: 100%;
+    font-family: 'grand', sans-serif;
+    letter-spacing: 0.3em;
+    width: 100%;
+    font-size: 1.3em;
+    font-weight: 700;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+  
   
   .notebook-page {
     width: 100%;
     height: 4rem;
-    background-color: #ffffff;
+    background-color: inherit;
     background-image: linear-gradient(var(--lines) 0.06em, transparent 0.02em);
     background-size: 100% 1.9rem;
     position: relative;
@@ -276,26 +304,6 @@
     background-color: rgb(173, 173, 173);
     margin-bottom: 10px;
     box-shadow: 2px 2px 5px rgba(82, 81, 81, 0.2);
-  }
-  
-  .onion-types-banner {
-    color: #ff6600;
-    height: 100%;
-    display: flex;
-    width: 90%;
-    height: 4rem;
-    margin: 1em auto;
-  }
-  
-  .onion-banner-container {
-    height: 100%;
-    font-family: 'grand', sans-serif;
-    letter-spacing: 0.3em;
-    width: 100%;
-    font-size: 1.3em;
-    font-weight: 700;
-    overflow: hidden;
-    white-space: nowrap;
   }
   
   .onion-list {
@@ -369,6 +377,7 @@
   /* welcome section */
   .welcome {
     height: 40vh;
+    margin-top: -2rem;
   }
 
   .welcome h2 {
