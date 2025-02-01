@@ -60,6 +60,10 @@
       display: none;
   }
 
+  .clip.hidden-lg {
+    display: none;
+  }
+
   .bars-open, .bars-closed {
       cursor: pointer;
       font-size: 1.5rem;
@@ -724,19 +728,16 @@
 
   /* Tablet and Desktop Styles */
   @media (min-width: 620px){
-    .container {
-      width: 90vw;
-      padding: 2rem 1rem;
-    }
-
     .menu-bars-container, .menu-list{
       display: none;
     }
     
     .full-menu {
       width: 50vw;
+      margin: 0;
+      padding: 1em 0.2em;
       display: flex;
-      font-size: 1.5em;
+      font-size: 1.3rem;
       font-weight: 800;
       justify-content: space-between;
     }
@@ -752,7 +753,7 @@
     .hero-content {
       width: 60vw;
       height: 30vh;
-      line-height: 2;
+      line-height: 1.7;
     }
 
     .hero-content h1 {
@@ -766,6 +767,14 @@
 
     .hero-content a {
       font-size: 1.7rem;
+    }
+
+    .clip.hidden-lg {
+      display: none;
+    }
+
+    .clip.hidden{
+      display: block;
     }
 
     .welcome {
@@ -798,12 +807,18 @@
     }
 
     .product-card {
-      max-width: 17em;
+      max-width: 20rem;
+      max-height: 29.5rem;
       font-size: 1.5em;
     }
 
-    .buy-from-us {
-      background-color: inherit;
+    .product-image {
+      min-height: 10em;
+      max-height: 14em;
+    }
+
+    .product-details {
+      margin: -2.5em 0 0 0;
     }
 
     .buy-from-us h2 {
@@ -812,8 +827,9 @@
 
     .buy-from-us p {
       font-size: 1.5em;
-      width: 70vw;
-      line-height: 2.4;
+      width: 90vw;
+      line-height: 2;
+      margin-bottom: 1em;
     }
 
     article + .hidden {
@@ -830,6 +846,7 @@
       "drip drip stac stac bunc bunc"
       "drip drip stac stac bunc bunc"
     ;
+    margin-bottom: 3em;
     }
 
     .mua {
@@ -842,7 +859,7 @@
 
     .feedback-container h2 {
       font-size: 2em;
-      margin-bottom: 4rem;
+      margin-bottom: 1rem;
     }
 
     .feedback-grid {
@@ -905,38 +922,57 @@
 
  @media (min-width: 900px) {
   body{
-    width: 90vw;
+    width: 80vw;
     margin: 0 auto;
   }
 
-  .container {
-    width: 90vw;
-  }
-
   header .logo img {
-    width: 120px;
+    width: 130px;
   }
 
   header nav {
-    width: 50vw;
-    justify-content: space-between;
-    margin-right: 2rem;
+    width: 25vw;
+    font-weight: 500;
+  }
+
+  nav ul{
+    display: flex;
+    max-width: 100%;
+  }
+
+  nav ul li{
+    padding: 1em 0.5em;
   }
 
 
   .hero {
-    height: 70vh;
+    height: 60vh;
   }
 
   .hero-content {
-    max-width: 90vw;
+    max-width: 40vw;
     justify-content: flex-start;
   }
 
   .hero-content h1 {
-    max-width: 80vw;
+    max-width: 40vw;
     font-size: 2.2rem;
-    line-height: 1.4;
+    line-height: 2.5;
+  }
+
+  .clip.hidden-lg {
+    display: block;
+  }
+
+  .onion-types-banner {
+    max-width: 60vw;
+    min-height: 4em;
+    margin-bottom: 4em;
+  }
+
+  .welcome p {
+    max-width: 60vw;
+    margin-bottom: 4em;
   }
 
   .products h3 {
@@ -945,24 +981,59 @@
 
   .product-grid {
     grid-template-columns: repeat(12, 1fr);
+    gap: 2em;
     padding: 2rem 1rem;
     overflow: hidden;
   }
 
   .product-card {
-    max-width: 18rem;
+    min-width: 20rem;
+    max-width: 30rem;
+    min-height: 32rem;
     font-size: 1em;
   }
 
-  .product-card p {
-    font-size: 0.7rem;
+  .product-image {
+    min-height: 24em;
+    max-height: 14em;
+    margin-bottom: 4rem;
+  }
+
+  .rate-card {
+    margin-left: -10em;
+    width: 8rem;
+  }
+
+  .rating-label {
+    margin-left: 2rem;
+  }
+
+  .product-details {
+    font-size: 1.1em;
+  }
+
+  .buying-images-grid,
+  .feedback-container,
+  .contact {
+    max-width: 80vw;
+  }
+
+  .feedback-grid,
+  .contact,
+  .map
+  {
+    max-width: 100%;
+  }
+
+  iframe {
+    max-width: 100%;
   }
 
  }
 
 
 
- @media (min-width: 1050px) {
+ @media (min-width: 900px) {
 
  }
   
